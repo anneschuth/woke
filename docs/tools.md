@@ -16,10 +16,10 @@ as anyone working on your repository), then add this configuration to your
 `.pre-commit-config.yaml`:
 
 ```yaml
--   repo: https://github.com/get-woke/woke
-    rev: ''  # pick a tag to point to
-    hooks:
-    -   woke
+- repo: https://github.com/get-woke/woke
+  rev: ''  # pick a tag to point to from https://github.com/get-woke/woke/tags
+  hooks:
+    - id: woke
 ```
 
 (Note that in this case the `rev` only controls the version of a wrapper
@@ -30,10 +30,10 @@ although this requires you and anyone working on your repository to have
 `go` on your command search path and for it to be at least version 1.18:
 
 ```yaml
--   repo: https://github.com/get-woke/woke
-    rev: ''  # pick a tag to point to
-    hooks:
-    -   woke-from-source
+- repo: https://github.com/get-woke/woke
+  rev: ''  # pick a tag to point to from https://github.com/get-woke/woke/tags
+  hooks:
+    - id: woke-from-source
 ```
 
 (In this case the `rev` controls the version of `woke` itself.)
